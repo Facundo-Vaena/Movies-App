@@ -1,0 +1,77 @@
+/* .cnt {
+    padding-top: 10px;
+} */
+/* .form-container {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+} */
+
+/* .form-container button {
+    margin-left: 20px;
+} */
+/* .label {
+    padding-right: 10px;
+} */
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+form input{
+    padding: 7px;
+}
+
+.buscadorContainer{
+    background-color: rgb(17, 12, 12);
+    padding-bottom:560px;
+
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pelicula {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin:1%;
+    max-width: 180px;
+    padding:20px;
+    background-color: rgb(17, 12, 12);
+}
+
+.buscadorMovieLInk{
+    color:white;
+    text-decoration: none;
+    padding:2%;
+}
+
+.fav{
+    background-color: rgb(47, 47, 126);
+    color:white;
+}
+.fav:hover{
+    cursor: pointer;
+    background-color: rgb(28, 28, 97);
+
+}
+
+.moviePic{
+    box-shadow: 10px 8px 226px 115px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 10px 8px 226px 115px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 10px 8px 226px 115px rgba(0,0,0,0.75) inset;
+}
+
+/* .pelicula img{
+    width:20px;
+} */
+
+/* .fav {
+    display: flex;
+    justify-content: right;
+} */
