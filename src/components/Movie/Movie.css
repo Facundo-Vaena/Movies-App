@@ -24,7 +24,8 @@
 }
 
 img{
-  width: 300px; 
+  width: 300px;
+  border-radius: 2%; 
 }
 .movieDetailMain{
   margin-left:2%;

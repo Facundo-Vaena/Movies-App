@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../img/9d2c95aa6b46407da9e32ee0a8ea922a.png' //Este es el logo hecho de movies app (no entra muy bien)
 import Home from '../../Icons/Home Icon/home .png'
 import Fav from '../../Icons/Home Icon/heart .png'
+import Clapperboard from '../../Icons/clapperboard.png'
 
 
 import './Navbar.css';
@@ -20,6 +21,7 @@ export default function NavBar() {
             <nav>
                 <ul className="list">
                     <li className="list-item">
+                        <NavLink exact to='/'><img src={Clapperboard} className='icon navBarClapperboard'/></NavLink>
                         <NavLink exact to="/" className='navLink' ><img src={Home} className='icon' /></NavLink>
                         <NavLink to="/favs" ><img src={Fav} className='icon heartIcon' /></NavLink>
                         

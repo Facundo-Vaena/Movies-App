@@ -51,11 +51,15 @@ ul{
     padding:2%;
 }
 
-.fav{
+.buscadorInputSearch{
+    cursor: text ;
+}
+
+.favButton{
     background-color: rgb(47, 47, 126);
     color:white;
 }
-.fav:hover{
+.favButton:hover{
     cursor: pointer;
     background-color: rgb(28, 28, 97);
 

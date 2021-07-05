@@ -21,6 +21,18 @@ export class Buscador extends Component {
     this.props.getMovies(this.state.title)
     document.getElementById('title').value = ''
   }
+  favFunction(movie, id){
+    if(document.getElementById(id).value === 'Add To Favorites'){
+
+      this.props.addMovieFavorite(movie);
+      document.getElementById(id).value = 'Added to Favorites';
+      return
+    }
+    else return alert('Movie is already on favorites list!');
+  }
+
+
+
 
   render() {
     const { title } = this.state;
@@ -29,10 +41,11 @@ export class Buscador extends Component {
         {/* <h2>Buscador</h2> */}
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
           <div>
-            <label className="label" htmlFor="title">Película: </label>
+            
             <input
-              type="text"
+              type="search"
               id="title"
+              className='buscadorInputSearch'
               autoComplete="off"
               // value={title}
               placeholder='Movie...'
@@ -47,10 +60,10 @@ export class Buscador extends Component {
               <div key={movie.imdbID} className='pelicula'>
                 <img  src={movie.Poster} />
                 <NavLink to={`/movie/${movie.imdbID}`} className='buscadorMovieLInk' >{movie.Title}</NavLink>
-                <button className='fav' onClick={() =>
-                  this.props.addMovieFavorite(movie)}>
-                  Add to Favorites
-                </button>
+                <input className='favButton' id={movie.imdbID} onClick={() =>
+                   this.favFunction(movie, movie.imdbID)} type='button' value='Add To Favorites'/> 
+                   {/* this.props.addMovieFavorite(movie) */}
+                  
               </div>
             ) : null}
         </ul>
